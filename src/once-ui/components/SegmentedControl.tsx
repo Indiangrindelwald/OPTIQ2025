@@ -42,7 +42,10 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     }
   }, [selected]);
 
-  const handleButtonClick = (clickedButton: ButtonOption, event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleButtonClick = (
+    clickedButton: ButtonOption,
+    event: React.MouseEvent<HTMLButtonElement>,
+  ) => {
     event.stopPropagation();
     const newSelected = clickedButton.value;
     setInternalSelected(newSelected);
@@ -113,8 +116,6 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
               selected={index === selectedIndex}
               onClick={(event) => handleButtonClick(button, event)}
               role="tab"
-              className={className}
-              style={style}
               aria-selected={index === selectedIndex}
               aria-controls={`panel-${button.value}`}
               tabIndex={index === selectedIndex ? 0 : -1}

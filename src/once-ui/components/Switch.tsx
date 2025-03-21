@@ -3,7 +3,7 @@
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 
-import { Flex, InteractiveDetails, InteractiveDetailsProps, Spinner } from ".";
+import { Flex, InteractiveDetails, InteractiveDetailsProps } from ".";
 import styles from "./Switch.module.scss";
 import commonStyles from "./SharedInteractiveStyles.module.scss";
 
@@ -13,7 +13,6 @@ interface SwitchProps
   style?: React.CSSProperties;
   className?: string;
   isChecked: boolean;
-  loading?: boolean;
   name?: string;
   value?: string;
   disabled?: boolean;
@@ -28,7 +27,6 @@ const Switch: React.FC<SwitchProps> = forwardRef<HTMLInputElement, SwitchProps>(
       className,
       isChecked,
       reverse = false,
-      loading = false,
       onToggle,
       ariaLabel = "Toggle switch",
       disabled,
@@ -92,9 +90,7 @@ const Switch: React.FC<SwitchProps> = forwardRef<HTMLInputElement, SwitchProps>(
               [styles.checked]: isChecked,
               [styles.disabled]: disabled,
             })}
-          >
-            {loading && <Spinner size="xs" />}
-          </div>
+          />
         </div>
         {props.label && <InteractiveDetails {...props} onClick={() => {}} />}
       </Flex>

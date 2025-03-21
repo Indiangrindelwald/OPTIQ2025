@@ -84,7 +84,7 @@ const ToggleButton = forwardRef<HTMLElement, ToggleButtonProps>(
         style={style}
         {...props}
       >
-        {prefixIcon && <Icon name={prefixIcon} size={size === "l" ? "s" : "xs"} />}
+        {prefixIcon && <Icon name={prefixIcon} size={size === "l" ? "m" : "s"} />}
         {(label || children) && (
           <Flex
             padding={size === "s" ? "2" : "4"}

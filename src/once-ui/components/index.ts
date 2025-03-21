@@ -11,7 +11,6 @@ export * from "./Column";
 export * from "./Checkbox";
 export * from "./Chip";
 export * from "./ColorInput";
-export * from "./CompareImage";
 export * from "./DateInput";
 export * from "./DatePicker";
 export * from "./DateRangePicker";
