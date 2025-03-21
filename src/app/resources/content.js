@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Karnnan",
+  lastName: "AJ",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Electronics Engineer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Malayalam", "Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -29,12 +29,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Karnnanaj",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/karnnan-aj-1103a0268/",
   },
   {
     name: "X",
@@ -44,7 +44,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:karnnanaj2004@gmail.com",
   },
 ];
 
@@ -52,11 +52,13 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Electronics Engineer & Builder</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+       I'm Karnnan, an electronics design engineer with hands-on experience in 
+  <InlineCode>embedded systems</InlineCode>, <InlineCode>power electronics</InlineCode>, 
+  and <InlineCode>high-voltage circuits</InlineCode>. I design and build custom hardware, 
+  from <br /> microcontroller-based systems to high-frequency Tesla coils.
     </>
   ),
 };
@@ -81,9 +83,11 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+      I am a self-taught electronics design engineer with a passion for building innovative hardware solutions.  
+      My work spans embedded systems, power electronics, high-voltage circuits, and the intersection of electronics and photonics.  
+      I specialize in applying electronics and engineering knowledge to solve real-world challenges.  
+
+
       </>
     ),
   },
@@ -92,21 +96,18 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Electronics Startup",
+        timeframe: "2023 - Present",
+        role: "Co-Founder & Design Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Designed and built custom electronic hardware solutions, including embedded systems and power electronics.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Developed and maintained PCB designs for high-voltage and precision analog systems.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
             alt: "Once UI Project",
@@ -116,17 +117,15 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Photonics Research & Development",
+        timeframe: "2022 - Present",
+        role: "Student Researcher",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Worked on nanomaterial synthesis for photonic sensor applications, including fiber Bragg gratings.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Simulated and analyzed optical communication systems for next-gen telecom applications.
           </>,
         ],
         images: [],
@@ -138,23 +137,22 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "International School of Photonics, CUSAT",
+        description: <>Pursuing an Integrated MSc in Photonics, specializing in laser physics and optical systems.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "GHSS, Karupadanna",
+        description: <>Completed higher secondary education in Computer Science, Mathematics, and Physics.</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Embedded Systems",
+        description: <>Experienced in microcontroller programming (Arduino, STM32, ESP32) and real-time processing.</>,
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
@@ -171,9 +169,8 @@ const about = {
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Power Electronics & High Voltage Circuits",
+        description: <>Designed and tested high-voltage circuits, including Tesla coils and power converters.</>,
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
@@ -183,8 +180,14 @@ const about = {
           },
         ],
       },
+      {
+        title: "Optics & Photonics",
+        description: <>Worked on laser systems, optical fiber communications, and spectroscopy applications.</>,
+        images: [],
+      },
     ],
   },
+  
 };
 
 const blog = {
