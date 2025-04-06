@@ -9,11 +9,15 @@ import {
   SmartImage,
   Tag,
   Text,
+  TiltFx,
+  Grid,
+  Card,
+
 } from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { person, about, social } from "@/app/resources/content";
+import { home, person, about, social } from "@/app/resources/content";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -103,8 +107,8 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Flex fillWidth mobileDirection="column" horizontal="center">
-        {about.avatar.display && (
+      <Flex fillWidth direction="column" horizontal="center">
+        {/* {about.avatar.display && (
           <Column
             className={styles.avatar}
             minWidth="160"
@@ -129,8 +133,8 @@ export default function About() {
               </Flex>
             )}
           </Column>
-        )}
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+        )} */}
+        <Column className={styles.blockAlign} flex={9} maxWidth={60}>
           <Column
             id={about.intro.title}
             fillWidth
@@ -209,6 +213,69 @@ export default function About() {
             </Column>
           )}
 
+          {/* Speaker */}
+          <Column 
+            border="neutral-alpha-weak" 
+            paddingX="20" 
+            radius="xl" 
+            overflow="hidden" 
+            paddingY="m" 
+            fillWidth 
+            position="relative"
+          >
+            <Column horizontal="center" gap="48" fillWidth position="relative">
+              <Heading align="center" as="h2" variant="display-default-l">
+                Speakers
+              </Heading>
+            </Column>
+            <Grid
+              columns={3} // Default for larger screens
+              gap="24"
+              fillWidth
+              paddingTop="m"
+              wrap
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", // Responsive grid
+              }}
+            >
+              {home.topics.map((topic, index) => (
+                <TiltFx key={index} paddingX="8">
+                  <Card
+                    maxWidth={24} // Container width constraint
+                    radius="l-4" // Larger radius for outer card
+                    direction="column" // Vertical stacking
+                  >
+                    {topic.imgSrc && (
+                      <SmartImage // Corrected from Card to SmartImage
+                        sizes="640px" // Fixed size hint
+                        fillWidth={true} // Full width of card
+                        aspectRatio="4 / 3" // Consistent aspect ratio
+                        radius="l"
+                        bottomLeftRadius="xs"
+                        bottomRadius="xs"
+                        src={topic.imgSrc}
+                        alt={topic.alt || topic.title}
+                      />
+                    )}
+                    <Flex fillWidth={true} paddingX="20" paddingY="24" gap="8" direction="column">
+                      <Text variant="body-default-m" >
+                        {topic.title}
+                      </Text>
+                      {topic.description && (
+                        <Text onBackground="neutral-weak" variant="body-default-s">
+                          {topic.description}
+                        </Text>
+                      )}
+                    </Flex>
+                  </Card>
+                </TiltFx>
+              ))}
+            </Grid>
+          </Column>
+
+
+      
           {about.work.display && (
             <>
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">

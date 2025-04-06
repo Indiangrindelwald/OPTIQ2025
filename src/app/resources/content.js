@@ -1,12 +1,12 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-  firstName: "Karnnan",
-  lastName: "AJ",
+  firstName: "OPTIQ",
+  lastName: "25",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Electronics Engineer",
+  role: "Photonics International Conference",
   avatar: "/images/avatar.jpg",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Malayalam", "Hindi"], // optional: Leave the array empty if you don't want to display languages
@@ -46,22 +46,176 @@ const social = [
     icon: "email",
     link: "mailto:karnnanaj2004@gmail.com",
   },
+  
 ];
 
 const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Electronics Engineer & Builder</>,
+  headline: <>OPTIQ 2025</>,
   subline: (
     <>
-       I'm Karnnan, an electronics design engineer with hands-on experience in 
-  <InlineCode>embedded systems</InlineCode>, <InlineCode>power electronics</InlineCode>, 
-  and <InlineCode>high-voltage circuits</InlineCode>. I design and build custom hardware, 
-  from <br /> microcontroller-based systems to high-frequency Tesla coils.
+      OPTIQ 2025 is an international conference which is going to be held in the International School of Photonics,
+      Cochin University of Science and Technology, Kochi. The event will consist of talks and dicussions by
+      professors, reseachers and industry professionals from all around the world. Themes that will be covered are photonics
+      and optics related. The detailed list of topics and the attendees are listed.
+      {/* <InlineCode>embedded systems</InlineCode>, <InlineCode>power electronics</InlineCode>, 
+      and <InlineCode>high-voltage circuits</InlineCode>. I design and build custom hardware, 
+      from <br /> microcontroller-based systems to high-frequency Tesla coils. */}
     </>
   ),
+ topics: [
+  { 
+    title: "Bio-Photonics", 
+    imgSrc: "/images/projects/topics/bio_photonics.jpg", 
+    description: "Explore cutting-edge applications of photonics in biology and medicine, including advanced imaging techniques, laser-based therapies, and biosensors for diagnostics at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Bio-Photonics Image" 
+  },
+  { 
+    title: "Optical Communication", 
+    imgSrc: "/images/projects/topics/communication.png", 
+    description: "Discover the latest innovations in optical signal transmission, including high-speed fiber optics, photonic integrated circuits, and next-generation networks showcased at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Optical Communication Image" 
+  },
+  { 
+    title: "Optical Fiber-based Devices", 
+    imgSrc: "/images/projects/topics/fiber_devices.jpg", 
+    description: "Learn about state-of-the-art devices leveraging optical fibers, such as amplifiers, lasers, and sensors, driving advancements in telecommunications and sensing technologies at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Optical Fiber Devices Image" 
+  },
+  { 
+    title: "Laser Plasma", 
+    imgSrc: "/images/projects/topics/laser_plasma.jpg", 
+    description: "Delve into the physics of laser-plasma interactions, including laser-induced fusion, plasma diagnostics, and ultrafast laser applications presented at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Laser Plasma Image" 
+  },
+  { 
+    title: "Metamaterials", 
+    imgSrc: "/images/projects/topics/metamaterials.jpg", 
+    description: "Uncover the potential of metamaterials in photonics, enabling unique optical properties for cloaking, superlens imaging, and advanced photonic devices at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Metamaterials Image" 
+  },
+  { 
+    title: "Microscopy Imaging", 
+    imgSrc: "/images/projects/topics/microscopy_imaging.jpg", 
+    description: "Experience breakthroughs in microscopy using photonic techniques, such as super-resolution imaging and live-cell analysis, highlighted at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Microscopy Imaging Image" 
+  },
+  { 
+    title: "Nanophotonics", 
+    imgSrc: "/images/projects/topics/nanophotonics.jpg", 
+    description: "Explore the nanoscale manipulation of light, including plasmonics and photonic crystals, with applications in nano-optics and quantum technologies at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Nanophotonics Image" 
+  },
+  { 
+    title: "Non-Linear Optics", 
+    imgSrc: "/images/projects/topics/non_linear.jpg", 
+    description: "Investigate non-linear optical phenomena, such as frequency conversion and optical parametric oscillation, driving innovations in laser systems at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Non-Linear Optics Image" 
+  },
+  { 
+    title: "Opto Devices", 
+    imgSrc: "/images/projects/topics/opto_devices.jpg", 
+    description: "Showcase the latest optoelectronic devices, including photodetectors, LEDs, and modulators, shaping the future of photonics technology at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Opto Devices Image" 
+  },
+  { 
+    title: "Photonic Sensors", 
+    imgSrc: "/images/projects/topics/photonic_sensors.jpg", 
+    description: "Highlight advanced photonic sensors for environmental monitoring, healthcare, and industrial applications, featuring cutting-edge research at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Photonic Sensors Image" 
+  },
+  { 
+    title: "Quantum Computing", 
+    imgSrc: "/images/projects/topics/quantum_computing.jpg", 
+    description: "Delve into the intersection of photonics and quantum computing, exploring quantum optics, entangled photon sources, and quantum communication at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Quantum Computing Image" 
+  },
+  { 
+    title: "Ultrafast Laser", 
+    imgSrc: "/images/projects/topics/ultrafast_laser.jpg", 
+    description: "Unveil the power of ultrafast lasers for material processing, medical surgery, and scientific research, with key developments presented at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "Ultrafast Laser Image" 
+  },
+  { 
+    title: "AI/ML Techniques in Photonics", 
+    imgSrc: "/images/projects/topics/machine_learning.jpg", // Assuming a new image name
+    description: "Discover how artificial intelligence and machine learning enhance photonic design, optimization, and signal processing at Optiq 2025.", 
+    imgPosition: "top",
+    width: 16, 
+    height: 9, 
+    alt: "AI/ML in Photonics Image" 
+  },
+],
+  features: [
+    { 
+      title: "Feature 1", 
+      description: "Description for Feature 1", 
+      imgSrc: "/images/gallery/img-04.jpg", 
+      imgPosition: "top",
+      width: 16, 
+      height: 9, 
+      alt: "Feature 1 Image" 
+    },
+    { 
+      title: "Feature 2", 
+      description: "Description for Feature 2", 
+      imgSrc: "/images/gallery/img-05.jpg", 
+      imgPosition: "top",
+      width: 16, 
+      height: 9, 
+      alt: "Feature 2 Image" 
+    },
+    { 
+      title: "Feature 3", 
+      description: "Description for Feature 3", 
+      imgSrc: "/images/gallery/img-06.jpg", 
+      imgPosition: "top",
+      width: 16, 
+      height: 9, 
+      alt: "Feature 3 Image" 
+    },
+  ],
 };
+
+
 
 const about = {
   label: "About",
@@ -83,9 +237,10 @@ const about = {
     title: "Introduction",
     description: (
       <>
-      I am a self-taught electronics design engineer with a passion for building innovative hardware solutions.  
-      My work spans embedded systems, power electronics, high-voltage circuits, and the intersection of electronics and photonics.  
-      I specialize in applying electronics and engineering knowledge to solve real-world challenges.  
+      OPTIQ 2025 is an international conference which is going to be held in the International School of Photonics,
+      Cochin University of Science and Technology, Kochi. The event will consist of talks and dicussions by
+      professors, reseachers and industry professionals from all around the world. Themes that will be covered are photonics
+      and optics related. The detailed list of topics and the attendees are listed.
 
 
       </>
